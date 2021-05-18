@@ -47,7 +47,7 @@ app.post('/add', addWeather);
 
 function addWeather (req,res){
   let data = req.body;
-  console.log ('server side data ', data);
+  console.log ('Server Side Data ', data);
   projectData['temp'] = data.temp;
   projectData['date'] = data.date;
   projectData['feelings'] = data.feelings;
