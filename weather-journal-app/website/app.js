@@ -59,9 +59,9 @@ const updateUI = async () => {
   const request = await fetch('/all');
   try {
     const resultData = await request.json();
-    document.getElementById('date').innerHTML = `Date: ${resultData[0].date}`;
-    document.getElementById('temp').innerHTML = `Temperature: ${resultData[0].temp}`;
-    document.getElementById('content').innerHTML = `Feelings: ${resultData[0].feelings}`;
+    document.getElementById('date').innerHTML = `Date: ${resultData.date}`;
+    document.getElementById('temp').innerHTML = `Temperature: ${resultData.temp}`;
+    document.getElementById('content').innerHTML = `Feelings: ${resultData.feelings}`;
   } catch (error){
       console.log('Error: ', error);
   }
