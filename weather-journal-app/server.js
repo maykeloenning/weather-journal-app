@@ -45,8 +45,8 @@ function sendData (request, response) {
 // Post Route
 app.post('/add', addWeather);
 
-function addWeather (req,res){
-  let data = req.body;
+function addWeather (request,response){
+  let data = request.body;
   console.log ('Server Side Data ', data);
   projectData['temp'] = data.temp;
   projectData['date'] = data.date;
