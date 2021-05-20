@@ -31,7 +31,7 @@ const server = app.listen(port, listening);
 
 // Callback to debug
 function listening(){
-    console.log(`running on localhost: ${port}`);
+    console.log(`Running on localhost: ${port}`);
   };
 
 // Initialize all route with a callback function
@@ -47,10 +47,11 @@ app.post('/add', addWeather);
 
 function addWeather (request,response){
   let data = request.body;
-  console.log ('Server Side Data ', data);
+  //let celcius = (data.temp -32)*5/9 //convert F to Celcius
+  
   projectData['temp'] = data.temp;
   projectData['date'] = data.date;
   projectData['feelings'] = data.feelings;
-
+  console.log ('Server Side Data ', projectData);
   response.send(projectData);
 };
